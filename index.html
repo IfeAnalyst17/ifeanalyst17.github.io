@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwatosin Oke | Data Analyst & Researcher Portfolio</title>
+    <style>
+        :root {
+            --primary: #0078d4;
+            --text-main: #201f1e;
+            --text-muted: #605e5c;
+            --bg-light: #faf9f8;
+            --card-bg: #ffffff;
+            --border: #edebe9;
+        }
+        body { 
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-main); 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 30px 20px; 
+            background-color: var(--bg-light); 
+        }
+        header { 
+            border-bottom: 3px solid var(--primary); 
+            padding-bottom: 25px; 
+            margin-bottom: 40px; 
+        }
+        h1 { margin: 0; color: var(--primary); font-size: 2.5rem; font-weight: 700; }
+        .subtitle { font-size: 1.3rem; color: var(--text-muted); margin-top: 5px; font-weight: 400; }
+        .contact-links { margin-top: 15px; font-size: 0.95rem; }
+        .contact-links a { color: var(--primary); text-decoration: none; margin-right: 15px; font-weight: 600; }
+        .contact-links a:hover { text-decoration: underline; }
+        
+        .section-title { color: var(--text-main); border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-top: 40px; font-size: 1.75rem; }
+        
+        .project { background: var(--card-bg); padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 35px; border: 1px solid var(--border); }
+        .project h3 { margin-top: 0; color: var(--text-main); font-size: 1.4rem; }
+        .project-img { width: 100%; max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); margin: 20px 0; }
+        
+        .badge { background: #f3f2f1; color: #323130; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 6px; display: inline-block; margin-bottom: 5px; }
+        .grid-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 20px 0; }
+        .metric-card { background: var(--bg-light); padding: 15px; border-radius: 6px; text-align: center; border: 1px solid var(--border); }
+        .metric-val { block: inset; font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .metric-lbl { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+        
+        .pub-card { background: var(--card-bg); padding: 20px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid var(--primary); box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+        .pub-meta { font-size: 0.85rem; color: #a4262c; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }
+        .pub-title { font-weight: 700; font-size: 1.1rem; color: var(--text-main); margin: 5px 0; }
+        .pub-authors { font-size: 0.95rem; color: #323130; }
+        .pub-journal { font-style: italic; color: var(--text-muted); }
+        .pub-link { display: inline-block; margin-top: 8px; font-size: 0.9rem; color: var(--primary); text-decoration: none; font-weight: 600; }
+        .pub-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Oluwatosin Oke</h1>
+        <div class="subtitle">Data Analyst | Business Intelligence | Operations, Marketing & Research Insights</div>
+        <div class="contact-links">
+            <a href="www.linkedin.com/in/oke-o-a55bb1262" target="_blank">LinkedIn Profile</a> 
+            <a href="https://github.com/IfeAnalyst17" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- PROJECTS SECTION -->
+        <section>
+            <h2 class="section-title">Analytics Projects</h2>
+            
+            <div class="project">
+                <h3>OPay User Demographics & Analytics Dashboard</h3>
+                <div>
+                    <span class="badge">Power BI Desktop</span>
+                    <span class="badge">Large Datasets (1M+ Rows)</span>
+                    <span class="badge">Data Modeling</span>
+                    <span class="badge">Cross-Filtering</span>
+                </div>
+                
+                <!-- Make sure your uploaded file name matches this exactly -->
+                <img src="Opay User Demographics Dashboard.png" alt="OPay Power BI Dashboard Framework" class="project-img">
+
+                <h4>Project Overview</h4>
+                <p>Developed an enterprise-ready dashboard analyzing <strong>1.77 million individual user profiles</strong> from OPay Nigeria (spanning 2022 to May 2025). This dataset exceeded standard Excel capacities (1.048M row limits), leveraging Power BI Engine capabilities to process high-volume information, structure demographic slices, and uncover regional operational trends.</p>
+
+                <h4>Key Performance Indicators Managed</h4>
+                <div class="grid-metrics">
+                    <div class="metric-card"><div class="metric-val">1.77M</div><div class="metric-lbl">Total Records Handled</div></div>
+                    <div class="metric-card"><div class="metric-val">43.99</div><div class="metric-lbl">Average User Age</div></div>
+                    <div class="metric-card"><div class="metric-val">37</div><div class="metric-lbl">States & Regions Covered</div></div>
+                    <div class="metric-card"><div class="metric-val">40+</div><div class="metric-lbl">Months Active Data</div></div>
+                </div>
+
+                <h4>Core Visual & Dashboard Capabilities Implemented</h4>
+                <ul>
+                    <li><strong>Temporal Trend Filters:</strong> Configured a Year Slicer (2022-2025) mapping steady linear transaction growth across groups, revealing recurring seasonal anomalies like a regular transaction dip every February.</li>
+                    <li><strong>Geographic Slicing Engine:</strong> Established interactive maps covering 6 major Nigerian geopolitical zones showing that the South West serves as the primary adoption baseline (35%+ of user density).</li>
+                    <li><strong>Demographic Segmentation Matrix:</strong> Tracked an exact 50/50 gender balance alongside generational clusters showing that Millennials and Gen X lead active platform reliance, with Gen X keeping the highest densities of local business accounts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS SECTION -->
+        <section>
+            <h2 class="section-title">Peer-Reviewed Research & Publications</h2>
+            
+            <div class="pub-card">
+                <div class="pub-meta">Peer-Reviewed Journal Article (2025)</div>
+                <div class="pub-title">Awareness, perception, and adoption of ChatGPT in African HEIs: A multi-dimensional analysis</div>
+                <div class="pub-authors">Ojubanire, O. A., Olaleye, S. A., Marhraoui, M. A., Kamihanda, M. W., <strong>Oke, O. I.</strong>, & Ojubanire, O. A.</div>
+                <div class="pub-journal">The Internet and Higher Education, Volume 65, 100999.</div>
+                <a class="pub-link" href="https://doi.org/10.1016/j.iheduc.2025.100999" target="_blank">Read Article (DOI: 10.1016/j.iheduc.2025.100999) →</a>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-meta">Peer-Reviewed Journal Article</div>
+                <div class="pub-title">Determinants of smart factory adoption in emerging economies: Evidence from the automotive industry in Morocco and Nigeria</div>
+                <div class="pub-authors">Ojubanire, O. A., Sebti, H., Berbain, S., Marhraoui, M. A., & <strong>Oke, O. I.</strong></div>
+                <div class="pub-journal">Innovation & Management Review.</div>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-meta">Book Chapter (2024)</div>
+                <div class="pub-title">Evaluating Knowledge, Perception, and Adoption of eNaira Among Rural Dwellers: Implications for Central Bank Digital Currency Development in Nigeria</div>
+                <div class="pub-authors">Ojubanire, O. A., Adedeji, O. P., <strong>Oke, O. I.</strong>, Olaleye, S. A., Ojubanire, O. A., & Fasanya, S. A.</div>
+                <div class="pub-journal">In P. K. Ozili (Ed.), Global Developments in Central Bank Digital Currency. IGI Global.</div>
+                <a class="pub-link" href="https://doi.org/10.4018/979-8-3693-5588-6.ch009" target="_blank">Read Chapter Link →</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+
+</body>
+</html>
