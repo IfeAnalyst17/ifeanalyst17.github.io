@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Oluwatosin Oke: Power BI dashboards in supply chain, e-commerce analytics and fintech, monitoring and evaluation, and peer-reviewed research.">
     <title>Oluwatosin Oke | Data Analyst & Researcher Portfolio</title>
     <style>
         :root {
@@ -29,6 +30,7 @@
         }
         h1 { margin: 0; color: var(--primary); font-size: 2.5rem; font-weight: 700; }
         .subtitle { font-size: 1.3rem; color: var(--text-muted); margin-top: 5px; font-weight: 400; }
+        .subtitle-sub { font-size: 1rem; color: var(--text-muted); margin-top: 4px; }
         .contact-links { margin-top: 15px; font-size: 0.95rem; }
         .contact-links a { color: var(--primary); text-decoration: none; margin-right: 15px; font-weight: 600; }
         .contact-links a:hover { text-decoration: underline; }
@@ -39,11 +41,20 @@
         .project h3 { margin-top: 0; color: var(--text-main); font-size: 1.4rem; }
         .project-img { width: 100%; max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); margin: 20px 0; }
         
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0; }
+        .gallery img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); }
+        
+        .data-note { background: var(--bg-light); border-left: 4px solid var(--primary); padding: 10px 14px; font-size: 0.9rem; color: var(--text-muted); border-radius: 4px; margin: 15px 0; }
+        
         .badge { background: #f3f2f1; color: #323130; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 6px; display: inline-block; margin-bottom: 5px; }
-        .grid-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 20px 0; }
+        .grid-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; margin: 20px 0; }
         .metric-card { background: var(--bg-light); padding: 15px; border-radius: 6px; text-align: center; border: 1px solid var(--border); }
-        .metric-val { block: inset; font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .metric-val { display: block; font-size: 1.5rem; font-weight: 700; color: var(--primary); }
         .metric-lbl { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+        
+        .project-links { margin-top: 20px; }
+        .btn { display: inline-block; background: var(--primary); color: #ffffff; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .btn:hover { opacity: 0.9; }
         
         .pub-card { background: var(--card-bg); padding: 20px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid var(--primary); box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
         .pub-meta { font-size: 0.85rem; color: #a4262c; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }
@@ -59,9 +70,10 @@
     <header>
         <h1>Oluwatosin Oke</h1>
         <div class="subtitle">Data Analyst | Business Intelligence | Operations, Marketing & Research Insights</div>
+        <div class="subtitle-sub">MSc Supply Chain Management (in progress)</div>
         <div class="contact-links">
-            <a href="www.linkedin.com/in/oke-o-a55bb1262" target="_blank">LinkedIn Profile</a> 
-            <a href="https://github.com/IfeAnalyst17" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/oke-o-a55bb1262/" target="_blank" rel="noopener">LinkedIn Profile</a> 
+            <a href="https://github.com/IfeAnalyst17" target="_blank" rel="noopener">GitHub</a>
         </div>
     </header>
 
@@ -69,7 +81,92 @@
         <!-- PROJECTS SECTION -->
         <section>
             <h2 class="section-title">Analytics Projects</h2>
-            
+
+            <!-- 1. SUPPLY CHAIN PERFORMANCE DASHBOARD -->
+            <div class="project">
+                <h3>Supply Chain Performance Dashboard</h3>
+                <div>
+                    <span class="badge">Power BI</span>
+                    <span class="badge">DAX</span>
+                    <span class="badge">Power Query</span>
+                    <span class="badge">Data Modeling</span>
+                </div>
+
+                <div class="gallery">
+                    <img src="supply-chain-summary.png" alt="Supply Chain Performance Dashboard: executive summary page" loading="lazy">
+                    <img src="supply-chain-bottlenecks.png" alt="Operational bottleneck analysis page" loading="lazy">
+                    <img src="supply-chain-risk.png" alt="Shipment risk and predictive analysis page" loading="lazy">
+                </div>
+
+                <h4>Project Overview</h4>
+                <p>A 3-page dashboard on <strong>31,872 shipment records</strong> (January 2021 to August 2024) that tests whether supplier reliability, dock efficiency, customs clearance time and risk classification actually explain delivery delays.</p>
+
+                <div class="grid-metrics">
+                    <div class="metric-card"><span class="metric-val">31,854</span><div class="metric-lbl">Shipments With Lead Time</div></div>
+                    <div class="metric-card"><span class="metric-val">5.23</span><div class="metric-lbl">Avg Lead Time (Days)</div></div>
+                    <div class="metric-card"><span class="metric-val">61.68%</span><div class="metric-lbl">Fulfilment Rate</div></div>
+                    <div class="metric-card"><span class="metric-val">69.86%</span><div class="metric-lbl">Avg Delay Probability</div></div>
+                </div>
+
+                <h4>Key Findings</h4>
+                <ul>
+                    <li><strong>Risk tiers do not predict delays:</strong> delay probability is about 70% in every risk class (Low 70.58%, Moderate 69.63%, High 69.82%).</li>
+                    <li><strong>Operational tiers show no gap:</strong> average lead time stays at 5.2 to 5.3 days across all supplier reliability and dock efficiency tiers, and fulfilment stays between 61% and 63%.</li>
+                    <li><strong>Over-classification:</strong> 75% of shipments (about 24K) are classed High Risk, so the classification cannot be used to prioritise shipments.</li>
+                    <li><strong>Takeaway:</strong> none of these fields separates good shipments from bad ones. A real analysis would need other drivers such as route, carrier or order data.</li>
+                </ul>
+
+                <div class="data-note"><strong>Data note:</strong> Kaggle logistics dataset (simulated), so a flat result is expected. The value of this project is the method: building the tiers with DAX, testing each assumed driver and reporting a null result honestly.</div>
+
+                <div class="project-links">
+                    <a href="https://github.com/IfeAnalyst17/supply-chain-performance-dashboard" target="_blank" rel="noopener" class="btn">View GitHub Repository</a>
+                </div>
+            </div>
+
+            <!-- 2. E-COMMERCE MARKETING & CUSTOMER ANALYTICS DASHBOARD -->
+            <div class="project">
+                <h3>E-commerce Marketing & Customer Analytics Dashboard</h3>
+                <div>
+                    <span class="badge">Power BI</span>
+                    <span class="badge">DAX</span>
+                    <span class="badge">RFM Segmentation</span>
+                    <span class="badge">Data Modeling</span>
+                </div>
+
+                <div class="gallery">
+                    <img src="ecommerce-overview.png" alt="E-commerce dashboard: overview page" loading="lazy">
+                    <img src="ecommerce-geography.png" alt="Geographic performance page" loading="lazy">
+                    <img src="ecommerce-rfm.png" alt="Customer segmentation and RFM page" loading="lazy">
+                    <img src="ecommerce-marketing.png" alt="Marketing channel performance page" loading="lazy">
+                </div>
+
+                <h4>Project Overview</h4>
+                <p>A 6-page dashboard on <strong>541,909 retail transactions</strong> (December 2010 to December 2011) covering products, geography, customer segments, marketing channels and demographics.</p>
+
+                <div class="grid-metrics">
+                    <div class="metric-card"><span class="metric-val">£9.75M</span><div class="metric-lbl">Total Revenue</div></div>
+                    <div class="metric-card"><span class="metric-val">25,900</span><div class="metric-lbl">Orders</div></div>
+                    <div class="metric-card"><span class="metric-val">£376.36</span><div class="metric-lbl">Average Order Value</div></div>
+                    <div class="metric-card"><span class="metric-val">14.8%</span><div class="metric-lbl">Return Rate</div></div>
+                    <div class="metric-card"><span class="metric-val">65.26%</span><div class="metric-lbl">Repeat Purchase Rate</div></div>
+                </div>
+
+                <h4>Key Findings</h4>
+                <ul>
+                    <li><strong>Products:</strong> Home Decor is the top category (£1.99M), followed by Other / General Merchandise (£1.89M) and Kitchen & Baking (£1.50M).</li>
+                    <li><strong>Geography:</strong> the UK generates 84% of revenue (£8.19M); the rest of the world adds £1.56M across 38 countries.</li>
+                    <li><strong>Customers:</strong> RFM scoring splits 4,335 customers into 7 segments. Champions are 21% of customers but about 64% of customer revenue, while 28% of customers are Lost / Churned.</li>
+                    <li><strong>Marketing:</strong> spend of £38.78K acquired 3,566 new customers (blended acquisition cost £10.88). Paid social (about £29 per new customer) and paid search (about £27) cost many times more than referral (about £3) and email (about £1).</li>
+                </ul>
+
+                <div class="data-note"><strong>Data note:</strong> Kaggle retail transactions. Customer demographics, acquisition channels and marketing spend are simulated, so those pages demonstrate the method rather than real business results.</div>
+
+                <div class="project-links">
+                    <a href="https://github.com/IfeAnalyst17/ecommerce-marketing-customer-analytics" target="_blank" rel="noopener" class="btn">View GitHub Repository</a>
+                </div>
+            </div>
+
+            <!-- 3. OPAY (REWRITTEN) -->
             <div class="project">
                 <h3>OPay User Demographics & Analytics Dashboard</h3>
                 <div>
@@ -83,41 +180,72 @@
                 <img src="Opay User Demographics Dashboard.png" alt="OPay Power BI Dashboard Framework" class="project-img">
 
                 <h4>Project Overview</h4>
-                <p>Developed an enterprise-ready dashboard analyzing <strong>1.77 million individual user profiles</strong> from OPay Nigeria (spanning 2022 to May 2025). This dataset exceeded standard Excel capacities (1.048M row limits), leveraging Power BI Engine capabilities to process high-volume information, structure demographic slices, and uncover regional operational trends.</p>
+                <p>Built an interactive dashboard analyzing <strong>1.77 million individual user profiles</strong> from OPay Nigeria (spanning 2022 to May 2025). The dataset exceeded Excel’s 1.048M row limit, so the analysis moved to Power BI to process high-volume information, structure demographic slices and uncover regional trends.</p>
 
                 <h4>Key Performance Indicators Managed</h4>
                 <div class="grid-metrics">
-                    <div class="metric-card"><div class="metric-val">1.77M</div><div class="metric-lbl">Total Records Handled</div></div>
-                    <div class="metric-card"><div class="metric-val">43.99</div><div class="metric-lbl">Average User Age</div></div>
-                    <div class="metric-card"><div class="metric-val">37</div><div class="metric-lbl">States & Regions Covered</div></div>
-                    <div class="metric-card"><div class="metric-val">40+</div><div class="metric-lbl">Months Active Data</div></div>
+                    <div class="metric-card"><span class="metric-val">1.77M</span><div class="metric-lbl">Total Records Handled</div></div>
+                    <div class="metric-card"><span class="metric-val">43.99</span><div class="metric-lbl">Average User Age</div></div>
+                    <div class="metric-card"><span class="metric-val">37</span><div class="metric-lbl">States & Regions Covered</div></div>
+                    <div class="metric-card"><span class="metric-val">40+</span><div class="metric-lbl">Months Active Data</div></div>
                 </div>
 
                 <h4>Core Visual & Dashboard Capabilities Implemented</h4>
                 <ul>
                     <li><strong>Temporal Trend Filters:</strong> Configured a Year Slicer (2022-2025) mapping steady linear transaction growth across groups, revealing recurring seasonal anomalies like a regular transaction dip every February.</li>
                     <li><strong>Geographic Slicing Engine:</strong> Established interactive maps covering 6 major Nigerian geopolitical zones showing that the South West serves as the primary adoption baseline (35%+ of user density).</li>
-                    <li><strong>Demographic Segmentation Matrix:</strong> Tracked an exact 50/50 gender balance alongside generational clusters showing that Millennials and Gen X lead active platform reliance, with Gen X keeping the highest densities of local business accounts.</li>
+                    <li><strong>Demographic Segmentation:</strong> Generational clusters show that Millennials and Gen X lead active platform reliance, with Gen X keeping the highest densities of local business accounts.</li>
+                    <li><strong>Data Quality Review:</strong> The gender split is exactly 50/50, one of several distribution patterns that point to synthetic data. Flagging this is part of the analysis, not a footnote.</li>
                 </ul>
             </div>
-        </section>
-        <!-- Netflix Portfolio Card -->
-<div class="project-card">
-  <img src="netflix-dashboard.png" alt="Netflix Content Strategy Dashboard" style="width: 100%; border-radius: 8px;">
-  
-  <h3>🎬 Netflix Content Strategy & Growth Analysis</h3>
-  <p><strong>Tools:</strong> Python (Pandas, Datetime Parsing), Power BI (DAX, Power Query), GitHub</p>
-  
-  <ul>
-    <li>Cleaned and engineered 8,800+ raw Netflix catalog titles in Python, resolving missing values and parsing custom date features.</li>
-    <li>Calculated a custom DAX <strong>Release Lag</strong> measure demonstrating how Netflix shifted from legacy content licensing to fresh originals (reducing lag down to ~1–2 years).</li>
-    <li>Designed an interactive executive dashboard visualizing global content distribution across major markets (US, UK, India, Japan, South Korea).</li>
-  </ul>
 
-  <div class="project-links">
-    <a href="https://github.com/IfeAnalyst17/ifeanalyst17.github.io" target="_blank" class="btn">View GitHub Repository</a>
-  </div>
-</div>
+            <!-- 4. COVID-19 M&E ANALYSIS -->
+            <div class="project">
+                <h3>COVID-19 Response Monitoring & Evaluation Analysis</h3>
+                <div>
+                    <span class="badge">Excel</span>
+                    <span class="badge">Results-Based Monitoring Framework</span>
+                    <span class="badge">Dashboard Design</span>
+                </div>
+
+                <!-- To add a screenshot of your Excel dashboard, upload it and uncomment the line below:
+                <img src="covid-me-dashboard.png" alt="COVID-19 M&E Excel dashboard" class="project-img">
+                -->
+
+                <h4>Project Overview</h4>
+                <p>Applied a results-based monitoring framework to assess COVID-19 response effectiveness across <strong>10 African countries</strong>, using 7.79M cases and 170,749 deaths from 2020 to 2023.</p>
+
+                <h4>Key Findings</h4>
+                <ul>
+                    <li>A <strong>56-percentage-point gap</strong> in vaccination coverage separates the best performer (Rwanda, 76%) from the weakest (Kenya, 20%).</li>
+                    <li>Resource allocation recommendations follow from that gap.</li>
+                    <li>An interactive Excel dashboard with 5 visualisation types covers comparative case fatality rates and testing capacity correlation, built for stakeholder reporting.</li>
+                </ul>
+            </div>
+
+            <!-- 5. NETFLIX -->
+            <div class="project">
+                <h3>🎬 Netflix Content Strategy & Growth Analysis</h3>
+                <div>
+                    <span class="badge">Python (Pandas)</span>
+                    <span class="badge">Power BI (DAX, Power Query)</span>
+                    <span class="badge">GitHub</span>
+                </div>
+
+                <img src="netflix-dashboard.png" alt="Netflix Content Strategy Dashboard" class="project-img">
+
+                <ul>
+                    <li>Cleaned and engineered 8,800+ raw Netflix catalog titles in Python, resolving missing values and parsing custom date features.</li>
+                    <li>Calculated a custom DAX <strong>Release Lag</strong> measure demonstrating how Netflix shifted from legacy content licensing to fresh originals (reducing lag down to ~1–2 years).</li>
+                    <li>Designed an interactive executive dashboard visualizing global content distribution across major markets (US, UK, India, Japan, South Korea).</li>
+                </ul>
+
+                <div class="project-links">
+                    <!-- Replace this link with the Netflix project repo once it is uploaded -->
+                    <a href="https://github.com/IfeAnalyst17" target="_blank" rel="noopener" class="btn">View GitHub Profile</a>
+                </div>
+            </div>
+        </section>
 
         <!-- PUBLICATIONS SECTION -->
         <section>
@@ -128,14 +256,14 @@
                 <div class="pub-title">Awareness, perception, and adoption of ChatGPT in African HEIs: A multi-dimensional analysis</div>
                 <div class="pub-authors">Ojubanire, O. A., Olaleye, S. A., Marhraoui, M. A., Kamihanda, M. W., <strong>Oke, O. I.</strong>, & Ojubanire, O. A.</div>
                 <div class="pub-journal">The Internet and Higher Education, Volume 65, 100999.</div>
-                <a class="pub-link" href="https://doi.org/10.1016/j.iheduc.2025.100999" target="_blank">Read Article (DOI: 10.1016/j.iheduc.2025.100999) →</a>
+                <a class="pub-link" href="https://doi.org/10.1016/j.iheduc.2025.100999" target="_blank" rel="noopener">Read Article (DOI: 10.1016/j.iheduc.2025.100999) →</a>
             </div>
 
             <div class="pub-card">
-                <div class="pub-meta">Peer-Reviewed Journal Article</div>
+                <div class="pub-meta">Peer-Reviewed Journal Article (2026)</div>
                 <div class="pub-title">Determinants of smart factory adoption in emerging economies: Evidence from the automotive industry in Morocco and Nigeria</div>
                 <div class="pub-authors">Ojubanire, O. A., Sebti, H., Berbain, S., Marhraoui, M. A., & <strong>Oke, O. I.</strong></div>
-                <div class="pub-journal">Innovation & Management Review.</div>
+                <div class="pub-journal">Innovation & Management Review, Volume 23, 99–117.</div>
             </div>
 
             <div class="pub-card">
@@ -143,13 +271,10 @@
                 <div class="pub-title">Evaluating Knowledge, Perception, and Adoption of eNaira Among Rural Dwellers: Implications for Central Bank Digital Currency Development in Nigeria</div>
                 <div class="pub-authors">Ojubanire, O. A., Adedeji, O. P., <strong>Oke, O. I.</strong>, Olaleye, S. A., Ojubanire, O. A., & Fasanya, S. A.</div>
                 <div class="pub-journal">In P. K. Ozili (Ed.), Global Developments in Central Bank Digital Currency. IGI Global.</div>
-                <a class="pub-link" href="https://doi.org/10.4018/979-8-3693-5588-6.ch009" target="_blank">Read Chapter Link →</a>
+                <a class="pub-link" href="https://doi.org/10.4018/979-8-3693-5588-6.ch009" target="_blank" rel="noopener">Read Chapter Link →</a>
             </div>
         </section>
     </main>
-
-</body>
-</html>
 
 </body>
 </html>
